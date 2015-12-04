@@ -1,0 +1,22 @@
+{
+  "name": "cadastro_ccb",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Elvisley Souza <elvis.s.p90@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6"
+  }
+}
