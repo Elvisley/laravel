@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use Carbon\Carbon;
 class Pessoa extends Model
 {
 
@@ -15,6 +15,13 @@ class Pessoa extends Model
 
     ];
 
-    
+    public function setFotoAttribute($foto){
+    	if(!empty($foto)){
+			$this->attributes['foto'] = Carbon::now()->second.$foto->getClientOriginalName();
+    		$name =  Carbon::now()->second.$foto->getClientOriginalName();
+    		\Storage::disk('local')->put($name , \File::get($foto));
+    	}
+    	
+    }
 
 }
